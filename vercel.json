@@ -4,8 +4,7 @@
       "src": "app.py",
       "use": "@vercel/python",
       "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.11"
+        "maxLambdaSize": "15mb"
       }
     }
   ],
@@ -14,5 +13,9 @@
       "src": "/(.*)",
       "dest": "app.py"
     }
-  ]
+  ],
+  "env": {
+    "STREAMLIT_SERVER_PORT": "8080",
+    "VERCEL_PYTHON_EXEC": "streamlit run app.py"
+  }
 }
